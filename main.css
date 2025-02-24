@@ -1,0 +1,215 @@
+
+
+
+* {
+
+  box-sizing: border-box;
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+body {
+  
+  height: 5000px;
+  background-color: white;
+    font-family: Arial, Tahoma;
+
+box-sizing: border-box;
+}
+
+
+
+
+.link {
+
+  text-decoration: none;
+
+  color: #8bc34a;
+  font-size: 25px;
+  border: 5px solid #8bc34a;
+font-weight: bold;
+/* padding: 15px 30px; */
+
+margin: 200px auto;
+display: block;
+
+width: fit-content;
+
+position: relative;
+width: 180px;
+height: 60px;
+display: flex;
+align-items: center;
+justify-content: center;
+text-align: center;
+transition:.3s ;
+overflow: hidden;
+}
+
+
+.link::before {
+
+  position: absolute;
+  content: attr(data-text);
+
+  transform: translate(-100%,-50%) ;
+
+transition: .5s;
+  width: 100%;
+  /* color: white; */
+  top: 50%;
+  left: 0;
+  
+  font-weight: bold;
+
+  /* transform: translateY(-100%); */
+
+
+
+}
+
+.link span {
+  transition: .5s;
+}
+
+.link:hover:before {
+
+transform: translate(0,-50%);
+
+
+
+}
+
+
+.link:hover span {
+
+transform: translateX(120%);
+
+
+
+}
+
+
+ul{
+  list-style: none;
+  display: flex;
+  padding: 0;
+margin: 0;
+}
+
+ul li {
+
+  font-size: 20px;
+  padding: 10px;
+  background-color: #eee;
+  border-left: 2px solid #f6f3f6;
+  cursor: pointer;
+  transition: .3s;
+  font-weight: bold;
+}
+
+
+ul li.active ,
+ul li:hover {
+
+  background-color: #ddd;
+}
+
+
+.content div:not(.active)
+{
+  display: none;
+}
+
+.content div {
+color: green;
+padding: 20px;
+height: 100px;
+background-color: #ddd;
+margin:0;
+font-size: 20px;
+transition: .5s;
+}
+
+
+
+
+
+.serial {
+
+  background-color: #ccc;
+  /* width: 300px; */
+  text-align: center;
+  margin: 100px auto;
+  height: 60px;
+  line-height: 30px;
+  font-size: 30px;
+  font-weight: bold;
+  border-radius: 5px;
+max-width: fit-content;
+padding: 20px;
+
+}
+
+
+span.generate {
+  
+  display: block;
+  width: fit-content;
+  background-color: black;
+  color: rgb(14, 225, 14);
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 5px auto;
+  cursor: pointer;
+  transition: .3s;
+}
+
+
+
+
+span.generate:hover  {
+
+color: green;
+
+}
+
+
+
+
+
+
+.up {
+  color: white;
+
+  background-color: #8bc34a;
+ padding: 5px;
+ border-radius: 5px;
+ font-weight: bold;
+
+ position: fixed;
+ right: -40px;
+ bottom: 120px;
+ transition: .5s;
+ cursor: pointer;
+ 
+}
+
+
+.up.show {
+  
+  right: 5%;
+  
+}
+
